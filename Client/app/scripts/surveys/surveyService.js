@@ -25,7 +25,7 @@
             return $http.get("api/Surveys/GetById",
                 {
                     params: { apiUrl: $rootScope.currentUser.apiUrl, id: id },
-                    description: "Getting Survey by id from API..."
+                    description: "Getting Survey by id..."
                 })
                 .then(function (response) {
                     return response.data;

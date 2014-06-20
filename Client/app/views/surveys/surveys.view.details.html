@@ -1,4 +1,30 @@
-﻿<div class="form-group">
-    <label>Name</label>
-    <input type="text" required name="name" ng-model="survey.SurveyName" class="form-control" disabled="disabled" />
+﻿<div class="row">
+    <div class="col-xs-5">
+        <div class="form-group">
+            <label for="surveyid" class="control-label">survey id</label>
+            <input type="text" name="surveyid" ng-model="survey.SurveyId" class="form-control" data-ng-disabled="true" />
+            <div class="form-group">
+                <label for="surveyname" class="control-label">name</label>
+                <input type="text" name="surveyname" ng-model="survey.SurveyName" class="form-control" data-ng-disabled="true" />
+            </div>
+            <div class="form-group">
+                <label for="clientname" class="control-label">client name</label>
+                <input type="text" name="clientname" ng-model="survey.ClientName" class="form-control" data-ng-disabled="true" />
+            </div>
+            <div class="form-group">
+                <label for="surveytype" class="control-label">survey type</label>
+                <input type="text" name="surveytype" ng-model="survey.SurveyType" class="form-control" data-ng-disabled="true" />
+            </div>
+            <div class="form-group">
+                <label for="description" class="control-label">survey description</label>
+                <input type="text" name="description" ng-model="survey.Description" class="form-control" data-ng-disabled="true" />
+            </div>
+            <div class="form-group">
+                <label for="interviewerinstruction" class="control-label">interviewer instruction</label>
+                <input type="text" name="interviewerinstruction" ng-model="survey.InterviewerInstruction" class="form-control" data-ng-disabled="true" />
+            </div>
+        </div>
+    </div>    
 </div>
+
+

@@ -11,7 +11,9 @@
                 .state("surveys.list", { url: "/list", templateUrl: "app/views/surveys/surveys.list.html", data: { authenticate: true } })
                 .state("surveys.view", { url: "/view/:surveyId", templateUrl: "app/views/surveys/surveys.view.html", data: { authenticate: true } })
                     .state("surveys.view.details", { url: "/details", templateUrl: "app/views/surveys/surveys.view.details.html", data: { authenticate: true } })
-                    .state("surveys.view.quota", { url: "/quota", templateUrl: "app/views/surveys/surveys.view.quota.html", data: { authenticate: true } })
+                    .state("surveys.view.settings", { url: "/settings", templateUrl: "app/views/surveys/surveys.view.settings.html", data: { authenticate: true } })
+                    .state("surveys.view.fieldwork", { url: "/fieldwork", templateUrl: "app/views/surveys/surveys.view.fieldwork.html", data: { authenticate: true } })
+                    .state("surveys.view.interviewers", { url: "/interviewers", templateUrl: "app/views/surveys/surveys.view.interviewers.html", data: { authenticate: true } })
             .state("interviewers", { url: "/interviewers", templateUrl: "app/views/interviewers/interviewers.html", data: { authenticate: true } })
                 .state("interviewers.list", { url: "/list", templateUrl: "app/views/interviewers/interviewers.list.html", data: { authenticate: true } });
     };

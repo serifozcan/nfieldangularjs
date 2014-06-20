@@ -2,12 +2,19 @@
 
     var module = angular.module("nfieldAngular");
 
-    module.controller("surveyDetailsController", ["$scope", "$state", "events","surveyService","errors", function (
-        $scope, $state, events,
+    module.controller("surveyDetailsController", ["$scope", "$state","surveyService","errors", function (
+        $scope, $state,
         surveyService, errors) {
 
-        $scope.survey = {SurveyName : "Test"};
+        $scope.survey = {};
 
+        var getSurvey = function () {
+            surveyService.getById($state.params.surveyId)
+                    .then(function (data) {
+                        $scope.survey = data;
+                    }).catch(errors.catchAll("Could not retrieve report"));
+        };
 
+        getSurvey();
     }]);
 }());
