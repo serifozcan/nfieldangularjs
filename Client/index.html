@@ -1,0 +1,61 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css">
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body data-ng-app="nfieldAngular">
+    <div data-na-side-menu></div>
+    
+    <div class="workSpinner" data-ng-show="outstandingRequests">
+        <span data-ng-show="requestDescription">{{requestDescription}}</span>
+        <img src="app/images/ajax-loader4.gif" />
+    </div>
+
+    <div class="text-warning" data-ng-hide="isAuthenticated">
+        You are not connected to Nfield API yet.
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+    <div class="messages">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="text-warning">Messages</span>
+                <button class="btn btn-default btn-xs pull-right" ng-click="closeAllAlerts()"><span class="glyphicon glyphicon-trash"></span>&nbsp; All</button>
+            </li>
+            <li class="list-group-item list-group-item-{{alert.type}}" ng-repeat="alert in alerts">
+                {{alert.message}}
+                {{alert.detail}}
+            </li>
+        </ul>
+    </div>
+    <script src="/bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <script src="app/scripts/nfieldAngularApp.js"></script>
+    <script src="app/scripts/sideMenu.js"></script>
+    <script src="app/scripts/loaderInterceptor.js"></script>
+    <script src="app/scripts/security/authService.js"></script>
+    <script src="app/scripts/errorService.js"></script>
+
+    <script src="app/scripts/security/login/loginFormController.js"></script>
+
+    <script src="app/scripts/surveys/surveyService.js"></script>
+    <script src="app/scripts/surveys/surveyListController.js"></script>
+    <script src="app/scripts/surveys/surveyDetailsController.js"></script>
+    <script src="app/scripts/surveys/surveyDetailsTabsController.js"></script>
+
+    <script src="app/scripts/interviewers/interviewerService.js"></script>
+    <script src="app/scripts/interviewers/interviewerListController.js"></script>
+
+</body>
+</html>

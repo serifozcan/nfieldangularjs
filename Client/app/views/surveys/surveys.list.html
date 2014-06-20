@@ -1,0 +1,23 @@
+﻿<div ng-controller="surveyListController">
+    <table class="table table-hover table-striped table-bordered">
+        <tr>
+            <th>Survey Id</th>
+            <th>Name</th>
+            <th>Survey Type</th>
+            <th></th>
+        </tr>
+        <tr data-ng-repeat="survey in surveys">
+            <td>{{survey.SurveyId}}</td>
+            <td>{{survey.SurveyName}}</td>
+            <td>{{survey.SurveyType}}</td>
+            <td>
+                <a data-ui-sref="surveys.view.details({ surveyId:survey.SurveyId })" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-list"></span>&nbsp;Details
+                </a>
+            </td>
+        </tr>
+        <tr data-ng-hide="surveys.length">
+            <td colspan="4"><span>No surveys to show...</span></td>
+        </tr>
+    </table>
+</div>

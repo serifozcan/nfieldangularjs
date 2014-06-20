@@ -1,0 +1,16 @@
+﻿<div ng-controller="surveyDetailsController">
+    <h3 ng-show="survey.SurveyName"> "{{survey.SurveyName}}"</h3>
+    <div ng-controller="surveyDetailsTabsController">
+        <tabset justified="true">
+            <tab ng-repeat="t in tabs"
+                 select="goTo(t.route)"
+                 active="t.active"
+                 disabled="t.disabled">
+                <tab-heading>
+                    {{t.header}}
+                </tab-heading>
+            </tab>
+        </tabset>
+    </div>
+        <div ui-view></div>
+</div>

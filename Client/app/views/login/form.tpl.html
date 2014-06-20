@@ -1,0 +1,37 @@
+﻿<form name="loginForm" id="loginForm" novalidate class="form">
+    <div class="modal-header">
+        <h4>Sign in</h4>
+    </div>
+    <div class="modal-body">
+        <div class="alert alert-danger" data-ng-show="authError">
+            {{authError}}
+        </div>
+        <div class="alert alert-info" data-ng-hide="loginForm.$valid">Please enter your login details</div>
+        <div class="form-group">
+            <label for="apiUrl" class="control-label">Api url</label>
+            <input name="apiUrl" type="url" data-ng-model="user.apiUrl" class="form-control" required autofocus>
+            <span data-ng-show="loginForm.apiUrl.$dirty && loginForm.apiUrl.$error.required" class="help-block" style="display: none;">api url is required</span>
+        </div>
+        <div class="form-group">
+            <label for="domain" class="control-label">Domain Name</label>
+            <input name="domain" type="text" data-ng-model="user.domain" class="form-control" required>
+            <span data-ng-show="loginForm.domain.$dirty && loginForm.domain.$error.required" class="help-block" style="display: none;">Domain name is required</span>
+        </div>
+        <div class="form-group">
+            <label for="username" class="control-label">Username</label>
+            <input name="username" type="text" data-ng-model="user.username" class="form-control" required>
+            <span data-ng-show="loginForm.username.$dirty && loginForm.username.$error.required" class="help-block" style="display: none;">Username is required</span>
+        </div>
+        <div class="form-group">
+            <label for="password" class="control-label">Password</label>
+            <input name="password" type="password" data-ng-model="user.password" class="form-control" required>
+            <span data-ng-show="loginForm.password.$dirty && loginForm.password.$error.required" class="help-block" style="display: none;">api url is required</span>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" data-ng-click="login()" data-ng-disabled='loginForm.$invalid'>Sign in</button>
+        <button class="btn clear" data-ng-click="clearForm()">Clear</button>
+        <button class="btn btn-warning cancel" data-ng-click="cancelLogin()">Cancel</button>
+    </div>
+</form>
