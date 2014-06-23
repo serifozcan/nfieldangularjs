@@ -5,9 +5,7 @@
     module.controller("surveyDetailsTabsController", ["$scope","$state", function ($scope, $state) {
         $scope.tabs = [
           { header: "Details", route: "surveys.view.details" },
-          { header: "Settings", route: "surveys.view.settings" },
-          { header: "Fieldwork Status", route: "surveys.view.fieldwork" },
-          { header: "Interviewers", route: "surveys.view.interviewers" }
+          { header: "Fieldwork Status", route: "surveys.view.fieldwork" }
         ];
 
         $scope.goTo = function (route) {

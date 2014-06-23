@@ -12,6 +12,7 @@ namespace Client
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
                 new CamelCasePropertyNamesContractResolver();
 
+            config.Routes.MapHttpRoute("DefaultApiWithAction", "api/{controller}/{action}");
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

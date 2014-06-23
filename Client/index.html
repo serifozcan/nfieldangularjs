@@ -6,7 +6,7 @@
 </head>
 <body data-ng-app="nfieldAngular">
     <div data-na-side-menu></div>
-    
+
     <div class="workSpinner" data-ng-show="outstandingRequests">
         <span data-ng-show="requestDescription">{{requestDescription}}</span>
         <img src="app/images/ajax-loader4.gif" />
@@ -26,7 +26,9 @@
         <ul class="list-group">
             <li class="list-group-item">
                 <span class="text-warning">Messages</span>
+                <img class="AngularJS-small pull-right" style="padding-left: 15px;" src="/app/images/AngularJS-small.png">
                 <button class="btn btn-default btn-xs pull-right" ng-click="closeAllAlerts()"><span class="glyphicon glyphicon-trash"></span>&nbsp; All</button>
+
             </li>
             <li class="list-group-item list-group-item-{{alert.type}}" ng-repeat="alert in alerts">
                 {{alert.message}}

@@ -32,9 +32,31 @@
                 });
         };
 
+        var getSettings = function (id) {
+            return $http.get("api/Surveys/GetSettings",
+                {
+                    params: { apiUrl: $rootScope.currentUser.apiUrl, id: id },
+                    description: "Getting survey's settings..."
+                })
+                .then(function (response) {
+                    return response.data;
+                });
+        };
+        var getFieldworkStatus = function (id) {
+            return $http.get("api/Surveys/GetFieldworkStatus",
+                {
+                    params: { apiUrl: $rootScope.currentUser.apiUrl, id: id },
+                    description: "Getting survey's fieldwork status ..."
+                })
+                .then(function (response) {
+                    return response.data;
+                });
+        };
         return {
             getAll: getAll,
-            getById: getById
+            getById: getById,
+            getSettings: getSettings,
+            getFieldworkStatus: getFieldworkStatus
         };
     }]);
 

@@ -119,3 +119,8 @@
 .voffset7 { margin-top: 80px; }
 .voffset8 { margin-top: 100px; }
 .voffset9 { margin-top: 150px; }
+
+img.AngularJS-small {
+width: 95px;
+height: 25px;
+}

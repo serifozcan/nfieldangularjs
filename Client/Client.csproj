@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\images\ajax-loader4.GIF" />
+    <Content Include="app\images\AngularJS-small.png" />
     <Content Include="app\scripts\errorService.js" />
     <Content Include="app\scripts\interviewers\interviewerListController.js" />
     <Content Include="app\scripts\interviewers\interviewerService.js" />
@@ -91,7 +92,6 @@
     <Content Include="app\views\interviewers\interviewers.list.html" />
     <Content Include="app\views\login\form.tpl.html" />
     <Content Include="app\views\sideMenu.html" />
-    <Content Include="app\views\surveys\surveys.view.interviewers.html" />
     <Content Include="app\views\surveys\surveys.view.fieldwork.html" />
     <Content Include="app\views\surveys\surveys.view.settings.html" />
     <Content Include="app\views\surveys\surveys.view.html" />
@@ -276,6 +276,7 @@
     <Content Include="bower_components\animate.css\bower.json" />
     <Content Include="bower_components\animate.css\package.json" />
     <Content Include="bower_components\animate.css\README.md" />
+    <None Include="Properties\PublishProfiles\nfieldmanagerlite.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
