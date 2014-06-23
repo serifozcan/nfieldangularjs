@@ -1,9 +1,9 @@
 ﻿<div ng-controller="surveyDetailsController">
     <h3 ng-show="survey.SurveyName"> "{{survey.SurveyName}}"</h3>
     <div ng-controller="surveyDetailsTabsController">
-        <tabset justified="true">
+        <tabset>
             <tab ng-repeat="t in tabs"
-                 select="goTo(t.route)"
+                 ng-click="sapsal(t.route)"
                  active="t.active"
                  disabled="t.disabled">
                 <tab-heading>

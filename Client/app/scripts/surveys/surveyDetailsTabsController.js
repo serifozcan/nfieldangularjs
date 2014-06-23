@@ -5,10 +5,10 @@
     module.controller("surveyDetailsTabsController", ["$scope","$state", function ($scope, $state) {
         $scope.tabs = [
           { header: "Details", route: "surveys.view.details" },
-          { header: "Fieldwork Status", route: "surveys.view.fieldwork" }
+          { header: "Fieldwork", route: "surveys.view.fieldwork" }
         ];
 
-        $scope.goTo = function (route) {
+        $scope.sapsal = function (route) {
             $state.go(route);
         };
 
@@ -17,6 +17,7 @@
         };
 
         $scope.$on("$stateChangeSuccess", function () {
+            console.log("$stateChangeSuccess event triggered ");
             angular.forEach($scope.tabs, function (tab) {
                 tab.active = $scope.active(tab.route);
             });

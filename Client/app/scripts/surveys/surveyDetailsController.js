@@ -25,13 +25,16 @@
 
         };
         var getSurveyFieldworkStatus = function () {
+            
             surveyService.getFieldworkStatus($state.params.surveyId)
                 .then(function (data) {
                     $scope.fieldwork = data;
                 }).catch(errors.catchAll("Could not retrieve survey's fieldwork information"));
 
         };
-        var init = function() {
+        var init = function () {
+            if (_.isEmpty($state.params.surveyId))
+                return;
             // try using pormises if its possible  
             getSurvey();
             //getSurveySettings();

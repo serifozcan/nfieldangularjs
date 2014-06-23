@@ -6,12 +6,11 @@
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
-            .state("root", { url: "/", data: { authenticate: true } })
+            .state("root", { url: "/", data: { authenticate:true } })
             .state("surveys", { url: "/surveys", templateUrl: "app/views/surveys/surveys.html", data: { authenticate: true } })
                 .state("surveys.list", { url: "/list", templateUrl: "app/views/surveys/surveys.list.html", data: { authenticate: true } })
-                .state("surveys.view", { url: "/view/:surveyId", templateUrl: "app/views/surveys/surveys.view.html", data: { authenticate: true } })
+                .state("surveys.view", { url: "/edit/:surveyId", templateUrl: "app/views/surveys/surveys.view.html", data: { authenticate: true } })
                     .state("surveys.view.details", { url: "/details", templateUrl: "app/views/surveys/surveys.view.details.html", data: { authenticate: true } })
-                    .state("surveys.view.settings", { url: "/settings", templateUrl: "app/views/surveys/surveys.view.settings.html", data: { authenticate: true } })
                     .state("surveys.view.fieldwork", { url: "/fieldwork", templateUrl: "app/views/surveys/surveys.view.fieldwork.html", data: { authenticate: true } })
             .state("interviewers", { url: "/interviewers", templateUrl: "app/views/interviewers/interviewers.html", data: { authenticate: true } })
                 .state("interviewers.list", { url: "/list", templateUrl: "app/views/interviewers/interviewers.list.html", data: { authenticate: true } });
@@ -67,8 +66,10 @@
             $rootScope.isAuthenticated = authService.isAuthenticated();
         });
 
-
+        //if (!authService.isAuthenticated())
+        //    $rootScope.$broadcast(authEvents.notAuthenticated);
         $rootScope.$on('$stateChangeStart', function (event, next) {
+            console.log("$stateChangeStart event triggered " + next.name);
             var authenticate = next.data.authenticate;
             if (!authService.isAuthenticated() && authenticate) {
                 event.preventDefault();
