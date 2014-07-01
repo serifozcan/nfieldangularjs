@@ -8,4 +8,18 @@
             <a data-ui-sref="interviewers.list">Interviewers</a>
         </li>
     </ul>
+    <ul data-ng-show="currentUser" class="nav navbar-nav pull-right">
+        <li class="dropdown" id="userInfo">
+            <a class="btn dropdown-toggle" href="#" data-toggle="dropdown" id="navUserInfo">welcome {{currentUser.userName}} <span class="caret"></span></a>
+            
+            <ul id="dropdown-login" class="dropdown-menu pull-right">
+                <li>
+                    <div class="form-group">
+                        <div>{{currentUser.apiUrl}}</div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
 </nav>

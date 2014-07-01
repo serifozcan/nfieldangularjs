@@ -6,7 +6,7 @@
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
-            .state("root", { url: "/", data: { authenticate:true } })
+            .state("root", { url: "/", data: { authenticate: true } })
             .state("surveys", { url: "/surveys", templateUrl: "app/views/surveys/surveys.html", data: { authenticate: true } })
                 .state("surveys.list", { url: "/list", templateUrl: "app/views/surveys/surveys.list.html", data: { authenticate: true } })
                 .state("surveys.view", { url: "/edit/:surveyId", templateUrl: "app/views/surveys/surveys.view.html", data: { authenticate: true } })
