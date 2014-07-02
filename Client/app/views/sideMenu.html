@@ -1,25 +1,38 @@
-﻿<nav class="navbar navbar-default">
-    <span class="navbar-brand"><a data-ng-href="#/">Nfield Manager Lite</a></span>
-    <ul class="nav navbar-nav">
-        <li data-ng-class="{active: isActive('surveys')}">
-            <a data-ui-sref="surveys.list">Surveys</a>
-        </li>
-        <li data-ng-class="{active: isActive('interviewers')}">
-            <a data-ui-sref="interviewers.list">Interviewers</a>
-        </li>
-    </ul>
-    <ul data-ng-show="currentUser" class="nav navbar-nav pull-right">
-        <li class="dropdown" id="userInfo">
-            <a class="btn dropdown-toggle" href="#" data-toggle="dropdown" id="navUserInfo">welcome {{currentUser.userName}} <span class="caret"></span></a>
-            
-            <ul id="dropdown-login" class="dropdown-menu pull-right">
-                <li>
-                    <div class="form-group">
-                        <div>{{currentUser.apiUrl}}</div>
-                    </div>
+﻿<div class="navbar yamm navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#/" class="navbar-brand">Nfield Manager Lite</a>
+        </div>
+        <div id="navbar-collapse-1" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li data-ng-class="{active: isActive('surveys')}">
+                    <a data-ui-sref="surveys.list">Surveys</a>
+                </li>
+                <li data-ng-class="{active: isActive('interviewers')}">
+                    <a data-ui-sref="interviewers.list">Interviewers</a>
                 </li>
             </ul>
-        </li>
+            <ul data-ng-show="currentUser" class="nav navbar-nav navbar-right">
+                <li class="dropdown" id="userInfo">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navUserInfo">welcome {{currentUser.userName}} <b class="caret"></b></a>
+                    <ul id="dropdown-login" class="dropdown-menu">
+                        <li>
+                            <div class="yamm-content">
+                                <div class="form-group">
+                                    <label for="apiUrl" class="control-label">Api Url</label>
+                                    <input type="text" name="apiUrl" ng-model="currentUser.apiUrl" class="form-control" data-ng-disabled="true" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="domain" class="control-label">Domain</label>
+                                    <input type="text" name="domain" ng-model="currentUser.domain" class="form-control" data-ng-disabled="true" />
+                                </div>
 
-    </ul>
-</nav>
+                            </div>
+
+                        </li>
+                    </ul>
+                </li>                
+            </ul>
+</div>
+    </div>
+</div>

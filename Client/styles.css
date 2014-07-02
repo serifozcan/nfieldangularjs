@@ -78,7 +78,7 @@
 }
 
 .container {
-    margin-bottom: 100px;
+    /*margin-bottom: 100px;*/
 }
 
 .messages {
@@ -123,4 +123,8 @@
 img.AngularJS-small {
 width: 95px;
 height: 25px;
+}
+
+#dropdown-login input[type="text"] {
+    width: 350px;
 }

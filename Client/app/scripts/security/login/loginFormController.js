@@ -2,7 +2,7 @@
 
     var module = angular.module("nfieldAngular");
 
-    module.controller("loginFormController", ["$scope", "authService", "$location", "errors", function ($scope, authService, $location, errors) {
+    module.controller("loginFormController", ["$scope", "authService", "$location", "errors", "$state", "$stateParams", function ($scope, authService, $location, errors, $state, $stateParams) {
 
         // The model for this form 
         $scope.user = {};
@@ -28,6 +28,8 @@
                     $scope.authError = "An Error occured during sign in.";
                 } else {
                     authService.closeLogin();
+                    var path = $location.path();
+                    //$state.go($state.current, $stateParams, { reload: true, inherit: false, notify: true });
                 }
                 }, function() { $scope.authError = "An Error occured during sign in."; }).catch();
         };

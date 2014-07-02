@@ -186,6 +186,12 @@
     <Content Include="bower_components\animate.css\source\specials\rollIn.css" />
     <Content Include="bower_components\animate.css\source\specials\rollOut.css" />
     <Content Include="bower_components\animate.css\source\_base.css" />
+    <Content Include="bower_components\yamm3\demo\css\bootstrap-theme.min.css" />
+    <Content Include="bower_components\yamm3\demo\css\bootstrap.min.css" />
+    <Content Include="bower_components\yamm3\demo\css\demo.css" />
+    <Content Include="bower_components\yamm3\index.html" />
+    <Content Include="bower_components\yamm3\LICENSE.txt" />
+    <Content Include="bower_components\yamm3\yamm\yamm.css" />
     <Content Include="Global.asax" />
     <Content Include="styles.css" />
     <Content Include="bower_components\angular\.bower.json" />
@@ -276,6 +282,15 @@
     <Content Include="bower_components\animate.css\bower.json" />
     <Content Include="bower_components\animate.css\package.json" />
     <Content Include="bower_components\animate.css\README.md" />
+    <Content Include="bower_components\yamm3\.bower.json" />
+    <Content Include="bower_components\yamm3\bower.json" />
+    <Content Include="bower_components\yamm3\composer.json" />
+    <Content Include="bower_components\yamm3\demo\jade\index.jade" />
+    <Content Include="bower_components\yamm3\demo\jade\navbar-fixed.jade" />
+    <Content Include="bower_components\yamm3\demo\jade\navbar-grid.jade" />
+    <Content Include="bower_components\yamm3\demo\jade\navbar-more.jade" />
+    <Content Include="bower_components\yamm3\README.md" />
+    <Content Include="bower_components\yamm3\yamm\yamm.less" />
     <None Include="Properties\PublishProfiles\nfieldmanagerlite.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
