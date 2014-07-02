@@ -1,4 +1,7 @@
-﻿input.ng-dirty.ng-invalid {
+﻿/*Body padding required for navbar-fixed-top */
+body { padding-top: 70px; }
+
+input.ng-dirty.ng-invalid {
     background-color: #ff0000;
 }
 
@@ -50,6 +53,7 @@
     position: absolute;
     top: 30px;
     right: 2px;
+    z-index: 9000;
 }
 
 .workSpinner > span {
